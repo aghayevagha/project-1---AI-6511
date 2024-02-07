@@ -21,7 +21,7 @@ def create_states(c_state):
 
         temp = c_state.pitchers.copy()
         new_water=c_state.current
-        if temp[i] != 0 and new_water+ temp[i] <= target*10:
+        if temp[i] != 0 and new_water+ temp[i] <= target:
             new_water += temp[i]
             temp[i] = 0
             states.append(StateClass(temp, new_water, c_state, 1, heuristic(target,new_water)))
